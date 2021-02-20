@@ -1,0 +1,30 @@
+ 
+  /* ============================================= */
+  /*              Buttons                          */
+  /* ============================================= */
+  
+  .btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $color-text-light;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: $br;
+    cursor: pointer;
+    transition: background-color .1s linear .2s;
+  }
+
+
+
+  @each $btn-type, $color in $btn-colors {
+    .#{$btn-type} {
+      background-color: $color;
+      &:hover {
+        background-color: lighten($color, $amount: 15%);
+      }
+    }
+    
+  }
+  
+  
